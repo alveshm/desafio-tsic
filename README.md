@@ -2,10 +2,15 @@
 
 Para rodar o projeto basta clonar para a pasta do seu servidor e seguir as etapas a seguir:
 
-1 - Editar o arquivo .env e colocar o acessos do seu banco de dados
+1 - Editar o arquivo .env.example e renomear para .env, alterar os acessos do seu banco de dados <pre>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=desafio_tsic
+DB_USERNAME=root
+DB_PASSWORD=</pre>
 
 
-2 - Rodar o comando <pre>CREATE DATABASE desafio_tsic;</pre>
+2 - No MySql rodar o comando <pre>CREATE DATABASE desafio_tsic;</pre>
 
 3 - Instalar o composer <pre>composer install</pre> 
 
@@ -16,3 +21,5 @@ Para rodar o projeto basta clonar para a pasta do seu servidor e seguir as etapa
 6 - Rodar o migrate para subir as tabelas <pre>php artisan migrate</pre>
 
 7 - Criar os seeds para testes <pre>php artisan db:seed</pre>
+
+8 - Rodar o comando <pre>php artisan serve</pre>
