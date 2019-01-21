@@ -16,9 +16,7 @@
 
                     <div class="boxes">
                         <a href="/produtos">Produtos</a>
-                        @if (auth()->user()->isAdmin == 1)
-                            <a href="/usuarios">Usuários</a>
-                        @endif
+                        <a href="/vendas">Vendas</a>
                     </div>
                 </div>
             </div>
