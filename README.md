@@ -15,3 +15,4 @@ Para rodar o projeto basta clonar para a pasta do seu servidor e seguir as etapa
 
 6 - Rodar o migrate para subir as tabelas <pre>php artisan migrate</pre>
 
+7 - Criar os seeds para testes <pre>php artisan db:seed</pre>
