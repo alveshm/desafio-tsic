@@ -1,6 +1,6 @@
 # desafio-tsic
 
-Desafio realizado com a linguagem de progração PHP, utilizando a framework Laraval na versão 5.7, bootstrap para os componentes e o gulp como task runner.
+Desafio realizado com a linguagem de progração PHP, utilizando a framework Laravel na versão 5.7, bootstrap para os componentes e o gulp como task runner.
 
 
 Para rodar o projeto basta clonar para a pasta do seu servidor e seguir as etapas a seguir:
