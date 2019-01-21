@@ -2,7 +2,12 @@
 
 Para rodar o projeto basta clonar para a pasta do seu servidor e seguir as etapas a seguir:
 
-1 - Editar o arquivo .env e colocar o acessos do seu banco de dados
+1 - Editar o arquivo .env.example e renomear para .env, alterar os acessos do seu banco de dados <pre>DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=desafio_tsic
+DB_USERNAME=root
+DB_PASSWORD=</pre>
 
 
 2 - Rodar o comando <pre>CREATE DATABASE desafio_tsic;</pre>
