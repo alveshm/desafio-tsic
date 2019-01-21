@@ -29,9 +29,7 @@ class ProdutoController extends Controller
     public function listaProdutos() 
     {
         $aProdutos = \App\Produto::all();
-        if (empty($aProdutos)) {
-            return view('produto.lista', ['aProdutos' => $aProdutos]);
-        }
+        
         return view('produto.lista', ['aProdutos' => $aProdutos]);
     }
 

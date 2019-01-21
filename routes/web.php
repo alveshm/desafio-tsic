@@ -22,12 +22,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => '/produtos'], function () {
     Route::get('/', 'ProdutoController@listaProdutos');
     Route::get('/cadastrar', function () {
-        return view('produto.cadastrar');
+        return view('produto.cadastrar')->middleware('checkrole');
     });   
+    Route::post('/salvar', 'ProdutoController@cadastrarProduto')->middleware('checkrole');
+});
 
-    Route::post('/salvar', 'ProdutoController@cadastrarProduto');
-    
+Route::group(['prefix' => '/vendas'], function () {
+    Route::post('/busca', 'DocumentoController@gerenciaVenda');
+    Route::get('/', 'DocumentoController@buscaCodigo');  
+    Route::post('/confirmar', 'DocumentoController@cadastrarItem');
+    Route::post('/confirmar', 'DocumentoController@cadastrarDocumento');
+    Route::post('/finalizarVenda', 'DocumentoController@finalizarDocumento');
 });
-Route::group(['middleware' => ['checkrole']], function () {
-    
-});
+
