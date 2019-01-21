@@ -17,6 +17,12 @@
                     <div class="boxes">
                         <a href="/produtos">Produtos</a>
                         <a href="/vendas">Vendas</a>
+                        @if ( auth()->user()->isAdmin == 1)
+                            <div class="vendas">
+                                Vendas confirmadas:
+                                <strong>{{ $vendas }}</strong>
+                            </div>   
+                        @endif
                     </div>
                 </div>
             </div>
