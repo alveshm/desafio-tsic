@@ -10,7 +10,7 @@ DB_USERNAME=root
 DB_PASSWORD=</pre>
 
 
-2 - Rodar o comando <pre>CREATE DATABASE desafio_tsic;</pre>
+2 - No MySql rodar o comando <pre>CREATE DATABASE desafio_tsic;</pre>
 
 3 - Instalar o composer <pre>composer install</pre> 
 
@@ -21,3 +21,5 @@ DB_PASSWORD=</pre>
 6 - Rodar o migrate para subir as tabelas <pre>php artisan migrate</pre>
 
 7 - Criar os seeds para testes <pre>php artisan db:seed</pre>
+
+8 - Rodar o comando <pre>php artisan serve</pre>
