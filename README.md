@@ -26,3 +26,21 @@ DB_PASSWORD=</pre>
 7 - Criar os seeds para testes <pre>php artisan db:seed</pre>
 
 8 - Rodar o comando <pre>php artisan serve</pre>
+
+9 - Criar a trigger para alimentar o campo de quantidade de vendas, executando o seguinte comando no banco de dados: <pre> USE `desafio_tsic`;
+
+DELIMITER $$
+USE `desafio_tsic`$$
+CREATE
+DEFINER=`root`@`localhost`
+TRIGGER `desafio_tsic`.`atualiza_total_vendas`
+AFTER INSERT ON `desafio_tsic`.`items`
+FOR EACH ROW
+BEGIN
+    UPDATE documentos
+       SET docu_tota = docu_tota + 1
+	 WHERE documentos.id = NEW.item_docu;
+END$$
+
+
+DELIMITER ; </pre>
